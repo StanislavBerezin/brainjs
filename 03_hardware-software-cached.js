@@ -21,4 +21,6 @@ if (fs.existsSync(networkPath)) {
   fs.writeFileSync(networkPath, JSON.stringify(network.toJSON(), null, 2));
 }
 
+const output = network.run('The code has some bugs');
 
+console.log(`Category: ${output}`);
