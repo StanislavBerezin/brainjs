@@ -12,3 +12,6 @@ network.train(trainingData, {
   iterations: 2000
 });
 
+const output = network.run('The code has some bugs');
+
+console.log(`Category: ${output}`);
