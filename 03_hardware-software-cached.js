@@ -14,6 +14,11 @@ let networkData = null;
 if (fs.existsSync(networkPath)) {
   networkData = JSON.parse(fs.readFileSync(networkPath));
   network.fromJSON(networkData);
-} 
+} else {
+  network.train(trainingData, {
+    iterations: 2000
+  });
+  fs.writeFileSync(networkPath, JSON.stringify(network.toJSON(), null, 2));
 }
+
 
