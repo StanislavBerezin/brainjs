@@ -1,2 +1,2 @@
 
-# Brain js basics
+# Brain js basic functionality
